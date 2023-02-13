@@ -76,7 +76,8 @@ contract Dappazon {
         Order memory order = Order(block.timestamp, item);
 
         // Add order for user
-        orderCount[msg.sender]++; // <-- Order ID
+        orderCount[msg.sender]++;
+        // <-- Order ID
         orders[msg.sender][orderCount[msg.sender]] = order;
 
         // Subtract stock
@@ -87,7 +88,7 @@ contract Dappazon {
     }
 
     function withdraw() public onlyOwner {
-        (bool success, ) = owner.call{value: address(this).balance}("");
+        (bool success,) = owner.call{value : address(this).balance}("");
         require(success);
     }
 }
