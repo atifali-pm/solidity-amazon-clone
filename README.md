@@ -1,4 +1,4 @@
-# Dappazon
+# Solidity Amazon Clone
 
 ## Technology Stack & Tools
 
