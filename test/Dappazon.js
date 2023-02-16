@@ -66,7 +66,7 @@ describe("Dappazon", () => {
       transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
       await transaction.wait()
 
-      // Buy a item
+      // Buy an item
       transaction = await dappazon.connect(buyer).buy(ID, { value: COST })
       await transaction.wait()
     })
@@ -102,7 +102,7 @@ describe("Dappazon", () => {
       let transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
       await transaction.wait()
 
-      // Buy a item
+      // Buy an item
       transaction = await dappazon.connect(buyer).buy(ID, { value: COST })
       await transaction.wait()
 
